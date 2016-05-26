@@ -29,7 +29,7 @@ public class PhoneCoordinateChanger {
 				for (double[] rtm : datas) {
 					phoneView.setTransform(rtm);
 					try {
-						Thread.sleep(500);
+						Thread.sleep(20);
 					} catch (InterruptedException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
@@ -71,7 +71,7 @@ public class PhoneCoordinateChanger {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		PhoneCoordinateChanger phoneCoordinateChanger = new PhoneCoordinateChanger();
-		String fileName = "./rtms.csv";
+		String fileName = "./rtm_gyr.csv";
 		phoneCoordinateChanger.replay(fileName);
 	}
 

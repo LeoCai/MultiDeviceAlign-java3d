@@ -33,7 +33,7 @@ public class PhoneView {
 		appearance.setPolygonAttributes(
 				new PolygonAttributes(PolygonAttributes.POLYGON_LINE, PolygonAttributes.CULL_BACK, 0.0f));
 
-		Box sphere = new Box(0.5f, 0.2f, 0.2f, appearance);
+		Box sphere = new Box(0.25f, 0.5f, 0.03f, appearance);
 
 		transform = new Transform3D();
 		Matrix3d matrix3d = new Matrix3d(1, 0, 0, 0, 1, 0, 0, 0, 1);
