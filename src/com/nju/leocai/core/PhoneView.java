@@ -15,6 +15,11 @@ import javax.vecmath.Vector3f;
 import com.sun.j3d.utils.geometry.Box;
 import com.sun.j3d.utils.universe.SimpleUniverse;
 
+/**
+ * a view of smart phone
+ * @author leocai
+ *
+ */
 public class PhoneView {
 
 	private TransformGroup tg;
@@ -70,6 +75,13 @@ public class PhoneView {
 		transform.set(matrix3d);
 		tg.setTransform(transform);
 	}
+	
+	public void setTransform(double[] rtm) {
+		transform = new Transform3D();
+		Matrix3d matrix3d = new Matrix3d(rtm);
+		transform.set(matrix3d);
+		tg.setTransform(transform);
+	}
 
 	public static void main(String args[]) {
 		new Thread(new Runnable() {
@@ -96,4 +108,6 @@ public class PhoneView {
 		}).start();
 //		d1.setTransform();
 	}
+
+	
 }
